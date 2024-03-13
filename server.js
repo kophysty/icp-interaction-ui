@@ -2,11 +2,14 @@
 const express = require('express');
 const { Actor, HttpAgent } = require('@dfinity/agent');
 const { IDL } = require('@dfinity/candid');
+const cors = require('cors');
+
 
 const agent = new HttpAgent({ host: 'https://ic0.app' });
 
 const app = express();
 const port = 3000;
+app.use(cors());
 
 // Build IDL actor 
 const idlFactory = ({ IDL }) => {
