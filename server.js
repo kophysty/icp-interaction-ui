@@ -1,8 +1,9 @@
 
-
 const express = require('express');
 const { Actor, HttpAgent } = require('@dfinity/agent');
+const { IDL } = require('@dfinity/candid');
 
+const agent = new HttpAgent({ host: 'https://ic0.app' });
 
 const app = express();
 const port = 3000;
@@ -34,6 +35,16 @@ app.get('/get-score', async (req, res) => {
   const walletId = req.query.walletId;
   if (!walletId) {
     return res.status(400).send('Wallet ID is required');
+  }
+
+  async function getScore(walletId) {
+    try {
+      // Actor должен уже содержать метод getScore, так как он определен в idlFactory
+      const score = await actor.getScore(walletId);
+      return score;
+    } catch (error) {
+      throw error;
+    }
   }
 
   try {
