@@ -39,7 +39,6 @@ app.get('/get-score', async (req, res) => {
 
   async function getScore(walletId) {
     try {
-      // Actor должен уже содержать метод getScore, так как он определен в idlFactory
       const score = await actor.getScore(walletId);
       return score;
     } catch (error) {
