@@ -49,4 +49,26 @@ button:hover {
     padding: 10px;
     background-color: #ddd;
     border-radius: 4px;
+
+    .result-container {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+    }
+    
+    .result-container h2 {
+        margin-top: 0;
+    }
+    #wallet-address {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    #score-result {
+        font-size: 24px;
+        color: #4CAF50; /* Зеленый цвет для удачного результата */
+        margin-bottom: 10px;
+    }
+
 }

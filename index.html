@@ -4,15 +4,23 @@
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
     </head>
-<body>
-    <div class="container">
-        <h1>ICP Wallet Scorer</h1>
-        <form id="score-form">
-            <input type="text" id="wallet-id" placeholder="Enter wallet ID" required>
-            <button type="submit">Get Score</button>
-        </form>
-        <div id="score-result"></div>
-    </div>
-    <!-- ... -->
-</body>
+    <body>
+        <div class="container">
+            <h1>ICP Wallet Scorer</h1>
+            <form id="score-form">
+                <input type="text" id="wallet-id" placeholder="Enter wallet ID" required>
+                <button type="submit">Get Score</button>
+            </form>
+            <div id="score-result-container" class="result-container">
+                <h2>Score Result</h2>
+                <div id="wallet-address"></div>
+                <div id="score"></div>
+            </div>
+            <div id="statistics-container" class="result-container">
+                <h2>Statistics</h2>
+                <div id="request-count">Total requests: 0</div>
+                <div id="last-updated">Last updated: never</div>
+            </div>
+        </div>
+    </body>
 </html>
