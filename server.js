@@ -10,6 +10,7 @@ const agent = new HttpAgent({ host: 'https://ic0.app' });
 const app = express();
 const port = 3000;
 app.use(cors());
+app.use(express.static(__dirname));
 
 // Build IDL actor 
 const idlFactory = ({ IDL }) => {

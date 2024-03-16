@@ -28,4 +28,13 @@ function updateStatistics() {
     totalRequests++;
     document.getElementById('request-count').textContent = `Total requests: ${totalRequests}`;
     document.getElementById('last-updated').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+    document.getElementById('statistics-container').addEventListener('click', function() {
+        const stats = document.getElementById('statistics');
+        if (stats.classList.contains('hidden')) {
+            stats.classList.remove('hidden');
+        } else {
+            stats.classList.add('hidden');
+        }
+    });
+
 }

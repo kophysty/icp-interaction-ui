@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <div class="container">
-            <h1>ICP Wallet Scorer</h1>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">ICP Wallet Scorer</div>
+            <button class="connect-wallet-btn">Connect Wallet</button>
+        </header>
+        <main>
             <form id="score-form">
                 <input type="text" id="wallet-id" placeholder="Enter wallet ID" required>
-                <button type="submit">Get Score</button>
+                <button type="submit" class="submit-btn">Get Score</button>
             </form>
             <div id="score-result-container" class="result-container">
                 <h2>Score Result</h2>
-                <div id="wallet-address"></div>
                 <div id="score"></div>
             </div>
             <div id="statistics-container" class="result-container">
-                <h2>Statistics</h2>
-                <div id="request-count">Total requests: 0</div>
-                <div id="last-updated">Last updated: never</div>
+                <button class="stats-btn">Show/Hide Statistics</button>
+                <div id="statistics" class="hidden">
+                    <div id="request-count">Total requests: 0</div>
+                    <div id="last-updated">Last updated: never</div>
+                </div>
             </div>
-        </div>
-    </body>
+        </main>
+        <footer class="footer">
+            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">Docs</a>
+            <a href="#" class="footer-link">Twitter</a>
+        </footer>
+    </div>
+</body>
 </html>

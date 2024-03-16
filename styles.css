@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
@@ -7,7 +15,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
+
 
 .container {
     text-align: center;
@@ -17,58 +27,78 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
 }
 
-input[type="text"] {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 300px;
+.logo {
+    font-weight: 900;
+    font-size: 1.5em;
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-button {
+.connect-wallet-btn {
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    background-color: #008CBA;
-    color: white;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #005f73;
+.submit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-#score-result {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #ddd;
-    border-radius: 4px;
-
-    .result-container {
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #f0f0f0;
-        border-radius: 4px;
-    }
-    
-    .result-container h2 {
-        margin-top: 0;
-    }
-    #wallet-address {
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    
-    #score-result {
-        font-size: 24px;
-        color: #4CAF50; /* Зеленый цвет для удачного результата */
-        margin-bottom: 10px;
-    }
-
+.submit-btn:hover {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.result-container h2 {
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+#score {
+    font-size: 2em;
+    color: #38ef7d;
+    padding: 10px 0;
+}
+
+.stats-btn {
+    margin: 20px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-link {
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
