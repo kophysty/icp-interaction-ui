@@ -147,7 +147,16 @@
     color: #fff;
     padding: 15px 32px;
     font: 600 16px Inter, sans-serif;
+    transition: background 0.3s, box-shadow 0.3s;
   }
+
+  .get-score-btn:hover {
+    background: linear-gradient(180deg, #7a82f1 0%, #bc74ef 100%); /* Инверсия цветов градиента */
+}
+
+.get-score-btn:active {
+    box-shadow: none; /* Удаление тени при нажатии */
+}
 
   @media (max-width: 991px) {
     .get-score-btn {
@@ -170,10 +179,16 @@
     margin-top: 13px;
     flex-direction: column;
     font-size: 36px;
-    font-weight: 700;
     white-space: nowrap;
     justify-content: center;
     padding: 37px 29px;
+    font-weight: 900; 
+    background: linear-gradient(90deg, #BB75F0 0%, #7C82F2 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+
+
   }
 
   @media (max-width: 991px) {
@@ -189,9 +204,13 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(#BB75F0, #7C82F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .statistics-toggle {
+    margin-top: 30px;
     justify-content: center;
     align-items: center;
     border-radius: 34px;
@@ -203,6 +222,8 @@
     color: #000;
     padding: 21px 60px;
     font: 300 18px Roboto, sans-serif;
+    margin: auto;
+    display: block;
 
   }
 

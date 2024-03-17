@@ -13,20 +13,24 @@
         <button class="connect-wallet-btn">Connect wallet</button>
     </header>
     <main class="container">
-        <section class="score-card">
+        <form id="score-form" class="score-card">
             <div class="wallet-input-wrapper">
                 <label class="wallet-input-label">
                     <span class="wallet-input-text">Your EVM wallet</span>
-                    <input type="text" class="wallet-input" aria-label="Your EVM wallet" />
+                    <input type="text" class="wallet-input" id="wallet-id" aria-label="Your EVM wallet" required />
                 </label>
-                <button class="get-score-btn">Get score</button>
+                <button type="submit" class="get-score-btn">Get score</button>
             </div>
             <p class="score-result-label">Score result</p>
             <div class="score-result">
-                <span class="score-value">37</span>
+                <span id="score">37</span>
             </div>
-            <button class="statistics-toggle">Show/Hide Statistics</button>
-        </section>
+        </form>
+        <button class="statistics-toggle stats-btn" id="statistics-toggle">Show/Hide Statistics</button> <!-- Обновленный класс и добавленный id -->
+        <div id="statistics" class="hidden"> <!-- Добавленный контейнер для статистики -->
+            <div id="request-count">Total requests: 0</div>
+            <div id="last-updated">Last updated: never</div>
+        </div>
         <footer class="footer">
             <nav class="footer-links">
                 <a href="#" class="footer-link">About</a>
