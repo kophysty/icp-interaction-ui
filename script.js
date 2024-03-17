@@ -1,22 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
     let totalRequests = 0; // Количество запросов
-    document.getElementById('score').textContent = '0';
-
-
-    // Элементы DOM
     const walletInput = document.getElementById('wallet-id');
     const scoreResult = document.getElementById('score');
     const requestCount = document.getElementById('request-count');
     const lastUpdated = document.getElementById('last-updated');
-    const statsContainer = document.getElementById('statistics');
     const statsToggleBtn = document.querySelector('.stats-btn');
 
-    // Установка placeholder для поля ввода кошелька
-    walletInput.setAttribute('placeholder', 'Enter your EVM wallet address');
+    // Инициализируем placeholder и начальное значение скора
+    walletInput.placeholder = 'Enter your EVM wallet address';
+    scoreResult.textContent = '0';
 
+    // Обработчик отправки формы
     document.getElementById('score-form').addEventListener('submit', function(e) {
         e.preventDefault();
-        const walletId = walletInput.value;
+        const walletId = walletInput.value.trim(); // Получаем значение, удаляем пробелы
+
+        // Проверка на пустое значение
+        if (!walletId) {
+            scoreResult.textContent = 'Please enter a wallet ID.';
+            return;
+        }
 
         // Запрос на сервер для получения рейтинга
         fetch(`http://localhost:3000/get-score?walletId=${walletId}`)
@@ -37,11 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 
-    // Переключение отображения статистики
+    // Переключение отображения статистики и изменение текста кнопки
     statsToggleBtn.addEventListener('click', function() {
-        statsContainer.classList.toggle('hidden');
+        const stats = document.getElementById('statistics');
+        stats.classList.toggle('hidden');
+        this.textContent = stats.classList.contains('hidden') ? 'Show/Hide Statistics' : 'Hide Statistics';
     });
 
+    // Функция обновления статистики
     function updateStatistics() {
         totalRequests++;
         requestCount.textContent = `Total requests: ${totalRequests}`;
