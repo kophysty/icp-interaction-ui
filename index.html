@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICP Wallet Scorer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">ICP Wallet Scorer</div>
-            <button class="connect-wallet-btn">Connect Wallet</button>
-        </header>
-        <main>
-            <form id="score-form">
-                <input type="text" id="wallet-id" placeholder="Enter wallet ID" required>
-                <button type="submit" class="submit-btn">Get Score</button>
-            </form>
-            <div id="score-result-container" class="result-container">
-                <h2>Score Result</h2>
-                <div id="score"></div>
+    <header class="header">
+        <h1 class="logo">ICP Scorer</h1>
+        <button class="connect-wallet-btn">Connect wallet</button>
+    </header>
+    <main class="container">
+        <section class="score-card">
+            <div class="wallet-input-wrapper">
+                <label class="wallet-input-label">
+                    <span class="wallet-input-text">Your EVM wallet</span>
+                    <input type="text" class="wallet-input" aria-label="Your EVM wallet" />
+                </label>
+                <button class="get-score-btn">Get score</button>
             </div>
-            <div id="statistics-container" class="result-container">
-                <button class="stats-btn">Show/Hide Statistics</button>
-                <div id="statistics" class="hidden">
-                    <div id="request-count">Total requests: 0</div>
-                    <div id="last-updated">Last updated: never</div>
-                </div>
+            <p class="score-result-label">Score result</p>
+            <div class="score-result">
+                <span class="score-value">37</span>
             </div>
-        </main>
+            <button class="statistics-toggle">Show/Hide Statistics</button>
+        </section>
         <footer class="footer">
-            <a href="#" class="footer-link">About</a>
-            <a href="#" class="footer-link">Docs</a>
-            <a href="#" class="footer-link">Twitter</a>
+            <nav class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Docs</a>
+                <a href="#" class="footer-link">Twitter</a>
+            </nav>
         </footer>
-    </div>
+    </main>
 </body>
 </html>

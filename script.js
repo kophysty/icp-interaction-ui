@@ -22,6 +22,12 @@ document.getElementById('score-form').addEventListener('submit', function(e) {
             document.getElementById('wallet-address').textContent = '';
             document.getElementById('score').textContent = 'Error fetching score. Please try again.';
         });
+
+        document.querySelector('.stats-btn').addEventListener('click', function() {
+            const statistics = document.getElementById('statistics');
+            statistics.classList.toggle('hidden');
+        });
+
 });
 
 function updateStatistics() {
