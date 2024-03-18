@@ -1,3 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    font-family: 'Inter', sans-serif;
+  }
+
 .container {
     background-color: #f7f7f7;
     display: flex;
@@ -14,6 +21,7 @@
   }
   
   .header {
+    background-color: #f7f7f7;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -245,7 +253,7 @@
     align-items: center;
     border-radius: 34px;
     box-shadow: 1px 8px 26.1px 0 rgba(0, 0, 0, 0.13);
-    background-color: #fff;
+    background-color: #f7f7f7;
     display: flex;
     margin-top: 364px;
     width: 769px;
