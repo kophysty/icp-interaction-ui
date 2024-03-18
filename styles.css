@@ -63,6 +63,14 @@ body {
     margin-right: 40px;
     font: 600 16px Inter, sans-serif;
   }
+
+  .connect-wallet-btn:hover {
+    background: linear-gradient(180deg, #7a82f1 0%, #bc74ef 100%);
+  }
+  
+  .connect-wallet-btn:active {
+    box-shadow: none;
+  }
   
   @media (max-width: 991px) {
     .connect-wallet-btn {
